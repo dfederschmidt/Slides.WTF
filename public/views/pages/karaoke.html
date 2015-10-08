@@ -1,0 +1,12 @@
+<section class="presentation-section">
+
+<iframe ng-hide="{{contentLoaded == true}}" class="presentation-iframe" allowfullscreen="1" ng-src="{{slidesURL}}" seamless='seamless'></iframe>
+<span ng-if="!contentLoaded" us-spinner="{radius:30, width:8, color: '#fff', length: 16}" spinner-key="spinner-1" spinner-start-active="true"></span>
+
+        <button class="btn btn-done btn-huge" ng-click="endKaraoke()">Done!</button>
+        <button class="btn btn-danger btn-huge" ng-click="reloadPage()">Reload.</button>
+
+        <div class="presentation-timer">
+          <timer finish-callback="endKaraoke()" countdown=255 interval="1000" >{{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}</timer>
+        </div>
+</section>

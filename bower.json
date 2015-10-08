@@ -1,0 +1,22 @@
+{
+  "name": "Slides.wtf",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Federschmidt <dani@syntiux.de>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.7",
+    "normalize-css": "normalize.css#~3.0.3",
+    "bootstrap": "~3.3.5",
+    "angular-crypto": "~0.0.3",
+    "tock": "~1.0.8",
+    "spin.js": "~2.3.2",
+    "angular-spinner": "~0.7.0"
+  }
+}
