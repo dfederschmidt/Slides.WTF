@@ -1,20 +1,17 @@
 var express = require('express');
 var config = require('./config');
 var morgan = require('morgan');
-var fs = require('fs');
 var winston = require('winston');
 
 var app = express();
 
-require('./routes/routes')(app);
+require('./routes')(app);
 
-app.use(morgan('common', {
-    stream: fs.createWriteStream('./logs/access.log', {flags: 'a'})
-}));
-app.use(morgan('dev'));
-
+//Start logging
+app.use(morgan('dev'))
 app.use('/', express.static(__dirname + '/public'));
 
+//Handle 404
 app.use(function(req, res, next){
   res.status(404);
   res.send({ error: 'Not found' });

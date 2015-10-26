@@ -1,17 +1,16 @@
-var slideshare = require('../modules/slideshare');
+var slideshare = require('./modules/slideshare');
 var winston = require("winston");
 
 module.exports = function(app) {
-  app.get('/v1/slideset', function(req, res) {
+  app.get('/v1/slides', function(req, res) {
     tag = req.query.tag;
 
-    winston.info("Received request for slides with tag: " + tag);
+    winston.info("Received request for slides with topic: " + tag);
 
     slideshare.fetchRandomSlideshareLink(tag, function(err, link){
-      winston.info(link);
       if(err != null){
         slideshare.fetchRandomSlideshareLink("", function(err, link){
-          res.json(link);
+          res.json(err);
           return;
         });
       } else {

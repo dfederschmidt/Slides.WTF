@@ -1,11 +1,11 @@
-//Modules and Variables
+//Aggregates all modules, partials and variables and is compiled into main.css
 
-//Partials
-@import "partials/start";
-@import "partials/theme";
-@import "partials/karaoke";
-@import "partials/landing";
-@import "partials/new";
+//Modules and Variables
 
 //Vendor
 @import "../../vendor/normalize-css/normalize.css";
+
+//Partials
+@import "partials/base";
+@import "partials/landing";
+@import "partials/presentation";

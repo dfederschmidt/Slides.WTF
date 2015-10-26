@@ -17,7 +17,6 @@ module.exports = {
     }
     winston.info("Picking page: " + page + " with tag:" + tag)
 
-
     var options = {
       url: 'https://www.slideshare.net/api/2/search_slideshows',
       qs: {

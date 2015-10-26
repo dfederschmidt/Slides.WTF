@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var minifyCss = require('gulp-minify-css');
 
 var sassFolder = './public/stylesheets/**/*.scss';
 var cssFolder = './public/assets/css';
@@ -14,12 +13,6 @@ var sassOptions = {
 var autoprefixerOptions = {
   browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
 };
-
-gulp.task('minify-css', function() {
-  return gulp.src(cssFolder + "/*.css")
-    .pipe(minifyCss({compatibility: 'ie9'}))
-    .pipe(gulp.dest(cssFolder));
-});
 
 gulp.task('sass', function () {
   return gulp

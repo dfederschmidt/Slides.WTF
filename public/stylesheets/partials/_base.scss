@@ -1,0 +1,10 @@
+/* Defines Base Styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@import "../modules/colors";
+@import "../modules/fonts";
+
+body {
+  height: 100%;
+  background-color: $dark;
+}

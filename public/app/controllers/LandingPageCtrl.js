@@ -1,9 +1,9 @@
 var app = angular.module('slideswtf');
 
-app.controller('LandingPageCtrl', function($scope, $location) {
+app.controller('LandingPageCtrl', function($scope, $location, TopicService) {
 
-$scope.getStarted = function(){
-  $location.path("/new");
+$scope.startSlideshow = function() {
+  TopicService.setTopic($scope.inputTopic);
+  $location.path("/slides");
 }
-
 });
