@@ -1,11 +1,7 @@
-//Aggregates all modules, partials and variables and is compiled into main.css
-
-//Modules and Variables
-
 //Vendor
 @import "../../vendor/normalize-css/normalize.css";
 
 //Partials
-@import "partials/base";
-@import "partials/landing";
-@import "partials/presentation";
+@import "base";
+@import "landing";
+@import "presentation";

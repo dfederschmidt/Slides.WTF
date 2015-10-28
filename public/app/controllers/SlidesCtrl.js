@@ -6,7 +6,7 @@ app.controller('SlidesCtrl', function($scope, $location, SlideService, $sce, Top
   }
 
   $scope.fetchSlidesLink = function() {
-    SlideService.fetchSlides(TopicService.getTopic(), function(error, slides) {
+    SlideService.fetchSlides(TopicService.getTopic(), function(err, slides) {
       if (err != null) {
         console.log("Slides could not be loaded");
       } else {

@@ -1,1 +1,11 @@
-<iframe allowfullscreen="1" class="slides-iframe" ng-src="{{slidesURL}}" seamless='seamless'></iframe>
+<!-- ng if presentation loaded -> spinner -->
+
+<div class="loadingscreen" ng-if="!slidesURL">
+  <div class="spinner">
+    <div class="cube1"></div>
+    <div class="cube2"></div>
+  </div>
+  <p>Searching for some slides...</p>
+</div>
+
+<iframe ng-if="slidesURL" allowfullscreen="1" class="slides-iframe" ng-src="{{slidesURL}}" seamless='seamless'></iframe>

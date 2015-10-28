@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var nodemon = require('gulp-nodemon');
 
 var sassFolder = './public/stylesheets/**/*.scss';
 var cssFolder = './public/assets/css';
@@ -30,4 +31,12 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('default', ['sass', 'watch']);
+
+gulp.task('serve', function () {
+  nodemon({ script: 'app.js'})
+    .on('restart', function () {
+      console.log('restarted!')
+    })
+})
+
+gulp.task('default', ['sass', 'watch','serve']);

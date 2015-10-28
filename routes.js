@@ -10,7 +10,7 @@ module.exports = function(app) {
     slideshare.fetchRandomSlideshareLink(tag, function(err, link){
       if(err != null){
         slideshare.fetchRandomSlideshareLink("", function(err, link){
-          res.json(err);
+          res.json(link);
           return;
         });
       } else {

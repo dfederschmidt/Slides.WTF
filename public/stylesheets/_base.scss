@@ -1,0 +1,21 @@
+/* Defines Base Styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@font-face {
+font-family: Langdon;
+font-weight: bold;
+src: url("../fonts/Langdon.otf") format("opentype");
+}
+
+$dark: #323232;
+$yellow: #F9DC5C;
+$red: #ED254E;
+$blue: #011936;
+$white: #FFFFFF;
+$green: #7EBF1C;
+
+body {
+  height: 100%;
+  background-color: $dark;
+}

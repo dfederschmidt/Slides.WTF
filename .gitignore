@@ -1,3 +1,4 @@
 node_modules/
 public/vendor/
 public/assets/css/main.css
+config.js

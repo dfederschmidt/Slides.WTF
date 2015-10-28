@@ -4,9 +4,7 @@
   "authors": [
     "Daniel Federschmidt <dani@syntiux.de>"
   ],
-  "description": "",
-  "main": "",
-  "moduleType": [],
+  "description": "A small service for random Slideshare presentations.",
   "license": "MIT",
   "homepage": "",
   "private": true,
